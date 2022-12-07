@@ -1,0 +1,143 @@
+enes.birgin@ab60016-7229 MINGW64 ~
+$ mkdir GitHubTesttttt
+
+enes.birgin@ab60016-7229 MINGW64 ~
+$ cd GitHubTesttttt/
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt
+$ git init
+Initialized empty Git repository in C:/Users/enes.birgin/GitHubTesttttt/.git/
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ touch test.txt
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git add .
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git commit-m "Test Dosyası Oluşturuldu"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git commit -m "Test Dosyası Oluşturuldu"
+[master (root-commit) e18efb9] Test Dosyası Oluşturuldu
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git log
+commit e18efb9fc2f3d0b2f40a7f86f70b84c565844e82 (HEAD -> master)
+Author: Enes Birgin <enesbirgin4@gmail.com>
+Date:   Wed Dec 7 11:30:41 2022 +0300
+
+    Test Dosyası Oluşturuldu
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git remote add origin https://github.com/enesbirgin/GitHubTesttttt.git
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/enesbirgin/GitHubTesttttt.git'
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$  git branch
+* master
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 240 bytes | 240.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/enesbirgin/GitHubTesttttt.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git add .
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git commit -m "İknci commit yapıldı"
+[master 084cf78] İknci commit yapıldı
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git log
+commit 084cf78a64f3ebc184d1ea2f590bd6dccbb8aeeb (HEAD -> master)
+Author: Enes Birgin <enesbirgin4@gmail.com>
+Date:   Wed Dec 7 13:23:30 2022 +0300
+
+    İknci commit yapıldı
+
+commit e18efb9fc2f3d0b2f40a7f86f70b84c565844e82 (origin/master)
+Author: Enes Birgin <enesbirgin4@gmail.com>
+Date:   Wed Dec 7 11:30:41 2022 +0300
+
+    Test Dosyası Oluşturuldu
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/enesbirgin/GitHubTesttttt.git
+   e18efb9..084cf78  master -> master
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git branch
+* master
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git branch feat
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (master)
+$ git switch feat
+Switched to branch 'feat'
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git touch ikinci.txt
+git: 'touch' is not a git command. See 'git --help'.
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ touch ikinci.txt
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git add .
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git commit -m "İkinci branchteki ilk commitimiz"
+[feat c2a3d31] İkinci branchteki ilk commitimiz
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ikinci.txt
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git branch
+* feat
+  master
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git remote
+origin
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$ git push origin feat
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feat' on GitHub by visiting:
+remote:      https://github.com/enesbirgin/GitHubTesttttt/pull/new/feat
+remote:
+To https://github.com/enesbirgin/GitHubTesttttt.git
+ * [new branch]      feat -> feat
+
+enes.birgin@ab60016-7229 MINGW64 ~/GitHubTesttttt (feat)
+$
